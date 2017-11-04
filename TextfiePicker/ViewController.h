@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) UITextField *Inputtext;
+@property (strong, nonatomic) UIDatePicker *TestPicker;
 
 @end
 

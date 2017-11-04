@@ -13,9 +13,19 @@
 @end
 
 @implementation ViewController
-
+@synthesize Inputtext,TestPicker;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Inputtext = [[UITextField alloc] initWithFrame:CGRectMake(50, 200, 200, 50)];
+    Inputtext.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:Inputtext];
+    
+    TestPicker = [[UIDatePicker alloc]init];
+    TestPicker.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"zh_zn"];
+    TestPicker.timeZone= [NSTimeZone timeZoneWithName:@"GMT"];
+    TestPicker.datePickerMode=UIDatePickerModeDate;
+    Inputtext.inputView=TestPicker;
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
